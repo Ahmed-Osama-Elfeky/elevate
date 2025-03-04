@@ -1,0 +1,27 @@
+@if(productDetials != null){
+    <section class="p-4 my-5">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 items-center gap-x-4 ">
+            <div class="product-image">
+                        <img [src]="productDetials.image" class="h-[250px] mx-auto   object-contain" [alt]="productDetials.title" >
+            </div>
+
+
+
+            <div class="product-details my-2 me-5">
+
+                <h1>{{productDetials.title}} </h1>
+                <p> {{productDetials.description}}</p>
+                <h3>{{productDetials.category}}</h3>
+                <div class="mt-4 me-5 flex flex-wrap justify-between">
+                    <h3>{{productDetials.price}}</h3>
+                    <span><i class=" rating-color  fa-solid fa-star"></i>{{productDetials.rating.rate}}</span>
+
+                </div>
+                <div class="mt-4 me-5">
+                    <button class="btn-main w-full mx-auto   block">+Add to cart</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
